@@ -10,8 +10,6 @@
     // If the login form is submitted, process the login
     if (isset($_POST['submit'])) {
 
-        var_dump($_SESSION);
-
         // Connect to the database
         $servername = "localhost";
         $username = "root";
@@ -30,7 +28,7 @@
         // Query the database for the user's credentials
         $sql = "SELECT * FROM users WHERE username = '$username'";
         $result = $conn->query($sql);
-    
+
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
 

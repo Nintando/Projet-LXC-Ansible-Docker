@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-var_dump($_SESSION);
-
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
 

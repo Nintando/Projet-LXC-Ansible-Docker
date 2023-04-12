@@ -28,11 +28,12 @@ final class testLogin extends TestCase{
     }
 
     public function testCorrectInput(){
+
         session_start();
         $hashed_password = password_hash('12345', PASSWORD_DEFAULT);
         
         $_POST['username'] = 'ProfDeMath';
-        $_POST['password'] = $hashed_password;
+        $_POST['password'] = '$2y$10$PNB3wL8zZ9iMdKSmlPv6P.pmre8rvqYO8kEqVmcWBRfitjKl7xnTm';
         $_POST['submit'] = 'Login';
 
         require 'login.php';
