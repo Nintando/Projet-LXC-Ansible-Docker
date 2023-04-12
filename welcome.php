@@ -19,9 +19,7 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <div class="welcome">
-        <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
-        <p>You have successfully logged in.</p>
-        <a href="logout.php">Logout</a>
+        <h1>Bonjour, monsieur <?php echo $_SESSION['username']; ?>!</h1>
     </div>
 </body>
 </html>
