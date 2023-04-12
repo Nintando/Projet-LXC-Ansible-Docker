@@ -18,6 +18,7 @@ final class testLogin extends TestCase{
         session_start();
         $_POST['username'] = '';
         $_POST['password'] = '';
+        $_POST['submit'] = 'Login';
     
         ob_start();
         require 'login.php';
@@ -32,6 +33,7 @@ final class testLogin extends TestCase{
         
         $_POST['username'] = 'ProfDeMath';
         $_POST['password'] = $hashed_password;
+        $_POST['submit'] = 'Login';
 
         require 'login.php';
         
